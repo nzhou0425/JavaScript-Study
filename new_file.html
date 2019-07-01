@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#serch{
+				border-radius: 15%;
+			}
+		</style>
+	</head>
+	<body>
+		<input type="text" id="serch" size="20" value="请输入链接" onfocus="this.value='';" onblur="if(this.value.length < 1) this.value='http://www.baidu.com';" />
+		<input type="button" name="btn" id="btn" value="跳转" />
+		<script type="text/javascript">
+			var src = document.getElementById("serch");
+			document.getElementById("btn").onclick=function(){
+				window.open("http://"+src.value);
+			};
+		</script>
+	</body>
+</html>
